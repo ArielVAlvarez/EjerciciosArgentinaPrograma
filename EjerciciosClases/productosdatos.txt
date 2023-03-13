@@ -1,0 +1,4 @@
+codigo producto precio
+a001 pantalon 15000
+a002 remera 8600
+a003 zapatilla 25000
