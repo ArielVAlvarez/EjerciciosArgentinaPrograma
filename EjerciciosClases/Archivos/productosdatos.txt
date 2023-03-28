@@ -1,0 +1,5 @@
+a001,pantalon,100
+a002,remera,500
+a003,zapatilla,0
+a004,medias,0
+b001,malla Anti Cloro,0 

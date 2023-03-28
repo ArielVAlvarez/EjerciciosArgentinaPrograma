@@ -4,6 +4,8 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.Date;
 
+import clase08.importeCeroException;
+
 public class carrito {
 
 		private persona per1;
@@ -49,7 +51,7 @@ public class carrito {
 		public void setFechacompra(LocalDateTime fechacompra) {
 			this.fechacompra = fechacompra;
 		}
-		public Double costofinal() {
+		public Double costofinal() throws importeCeroException {
 			Double sumatoria = 0.0;
 			sumatoria=sumatoria+pr1.costofinal()+pr2.costofinal()+pr3.costofinal();
 			return sumatoria;

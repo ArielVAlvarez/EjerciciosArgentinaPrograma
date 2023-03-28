@@ -2,7 +2,7 @@ package clase07;
 
 public class descuentoFijo extends Descuento {
 
-	descuentoFijo (double valorDescuento){			
+	public descuentoFijo (double valorDescuento){			
 		this.setValorDesc(valorDescuento);
 	}
 	@Override

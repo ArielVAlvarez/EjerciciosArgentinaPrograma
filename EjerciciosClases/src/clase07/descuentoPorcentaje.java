@@ -2,7 +2,7 @@ package clase07;
 
 public class descuentoPorcentaje extends Descuento {
 
-	descuentoPorcentaje (double valorDescuento){
+	public descuentoPorcentaje (double valorDescuento){
 		this.setValorDesc(valorDescuento);
 	}
 	@Override

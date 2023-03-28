@@ -8,6 +8,7 @@ import org.junit.jupiter.api.Test;
 
 import clase05.persona;
 import clase05.producto;
+import clase08.importeCeroException;
 
 class carrito2Test {
 
@@ -20,7 +21,12 @@ class carrito2Test {
 		
 		Descuento desc = new descuentoFijo(0);
 		carrito2 car01 = new carrito2(per01, prod1, prod2, prod3, LocalDateTime.now(), desc);
-		assertEquals(car01.costofinal(), 48600);	//el importe es incorrecto
+		try {
+			assertEquals(car01.costofinal(), 48600);
+		} catch (importeCeroException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}	//el importe es incorrecto
 
 	}
 	@Test
@@ -32,7 +38,12 @@ class carrito2Test {
 		
 		Descuento desc = new descuentoFijo(0);
 		carrito2 car01 = new carrito2(per01, prod1, prod2, prod3, LocalDateTime.now(), desc);
-		assertEquals(car01.costofinal(), 2930);
+		try {
+			assertEquals(car01.costofinal(), 2930);
+		} catch (importeCeroException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 
 	}	
 	@Test
@@ -44,7 +55,12 @@ class carrito2Test {
 		
 		Descuento desc = new descuentoFijo(20);
 		carrito2 car01 = new carrito2(per01, prod1, prod2, prod3, LocalDateTime.now(), desc);
-		assertEquals(car01.costofinal(), 2910);	//valor esperado 2910
+		try {
+			assertEquals(car01.costofinal(), 2910);
+		} catch (importeCeroException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}	//valor esperado 2910
 
 	}	
 	@Test	void testDesPorc() {
@@ -55,7 +71,12 @@ class carrito2Test {
 		
 		Descuento desc = new descuentoPorcentaje(.20);
 		carrito2 car01 = new carrito2(per01, prod1, prod2, prod3, LocalDateTime.now(), desc);
-		assertEquals(car01.costofinal(), 2344);	//valor esperado 2344
+		try {
+			assertEquals(car01.costofinal(), 2344);
+		} catch (importeCeroException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}	//valor esperado 2344
 
 	}
 	@Test	void testDesTope() {
@@ -66,7 +87,12 @@ class carrito2Test {
 		
 		Descuento desc = new descuentoPorcentajeConTope(.20,1000);
 		carrito2 car01 = new carrito2(per01, prod1, prod2, prod3, LocalDateTime.now(), desc);
-		assertEquals(car01.costofinal(), 2730);	//valor esperado 2730
+		try {
+			assertEquals(car01.costofinal(), 2730);
+		} catch (importeCeroException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}	//valor esperado 2730
 
 	}		
 	

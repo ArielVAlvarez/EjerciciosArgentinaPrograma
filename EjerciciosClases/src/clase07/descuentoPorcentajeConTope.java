@@ -4,7 +4,7 @@ public class descuentoPorcentajeConTope extends Descuento {
 
 	private double topeDescuento;
 	
-	descuentoPorcentajeConTope (double valor,double topeDescuento){
+	public descuentoPorcentajeConTope (double valor,double topeDescuento){
 		this.setValorDesc(valor);
 		this.topeDescuento=topeDescuento;
 	}

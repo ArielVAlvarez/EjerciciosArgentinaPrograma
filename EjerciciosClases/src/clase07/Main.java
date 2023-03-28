@@ -9,6 +9,7 @@ import java.util.List;
 import clase05.carrito;
 import clase05.persona;
 import clase05.producto;
+import clase08.importeCeroException;
 
 public class Main {
 
@@ -44,20 +45,35 @@ public class Main {
 			Descuento Descfijo = new descuentoFijo(20);
 			carrito2 car01 = new carrito2(per1,prod1,prod2,prod3,LocalDateTime.now(),Descfijo);
 			
-			System.out.println("Carrito Desc.Fijo Neto -> " + car01.neto()+
-						" Costo final ->" + car01.costofinal());
+			try {
+				System.out.println("Carrito Desc.Fijo Neto -> " + car01.neto()+
+							" Costo final ->" + car01.costofinal());
+			} catch (importeCeroException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			
 			Descuento Descporc = new descuentoPorcentaje(.10);
 			carrito2 car02 = new carrito2(per1,prod1,prod2,prod3,LocalDateTime.now(),Descporc);
 			
-			System.out.println("Carrito Desc.Porcentaje -> " + car02.neto()+
-						" Costo final ->" + car02.costofinal());
+			try {
+				System.out.println("Carrito Desc.Porcentaje -> " + car02.neto()+
+							" Costo final ->" + car02.costofinal());
+			} catch (importeCeroException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			
 			Descuento Desctope = new descuentoPorcentajeConTope(0.20, 15000);
 			carrito2 car03 = new carrito2(per1,prod1,prod2,prod3,LocalDateTime.now(),Desctope);
 			
-			System.out.println("Carrito Desc.Con tope -> " + car03.neto()+
-						" Costo final ->" + car03.costofinal());				
+			try {
+				System.out.println("Carrito Desc.Con tope -> " + car03.neto()+
+							" Costo final ->" + car03.costofinal());
+			} catch (importeCeroException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}				
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

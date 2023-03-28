@@ -8,6 +8,8 @@ import java.time.LocalDateTime;
 import java.util.Date;
 import java.util.List;
 
+import clase08.importeCeroException;
+
 public class principal {
 
 	public static void main(String[] args) {
@@ -31,7 +33,12 @@ public class principal {
 			
 			carrito car01 = new carrito(per1,prod1,prod2,prod3,LocalDateTime.now());
 		
-			System.out.println(car01.costofinal());			
+			try {
+				System.out.println(car01.costofinal());
+			} catch (importeCeroException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}			
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
