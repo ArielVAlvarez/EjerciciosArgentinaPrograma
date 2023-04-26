@@ -1,0 +1,4 @@
+{"nombre":"Taladro","precio":35000.0,"stock":15,"oferta":{"descuento":25,"stock":1000}}
+{"nombre":"Martillo","precio":8500.0,"stock":15,"oferta":{"descuento":25,"stock":1000}}
+{"nombre":"Pala","precio":16750.0,"stock":15,"oferta":{"descuento":15,"stock":1500}}
+{"nombre":"Destornillador","precio":9800,"stock":15,"oferta":{"descuento":25,"stock":1000}}
